@@ -1,18 +1,26 @@
 package com.github.cahyunkk.nusaenchant;
 
+import com.github.cahyunkk.nusaenchant.engine.TriggerEngine;
+import com.github.cahyunkk.nusaenchant.registry.EnchantRegistry;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class NusaEnchant extends JavaPlugin {
 
     private static NusaEnchant instance;
+    private EnchantRegistry enchantRegistry;
+    private TriggerEngine triggerEngine;
 
     @Override
     public void onEnable() {
         instance = this;
+
+        enchantRegistry = new EnchantRegistry(this);
+        triggerEngine = new TriggerEngine();
+
+        enchantRegistry.loadEnchants();
+
         getLogger().info("NusaEnchant v" + getDescription().getVersion() + " enabled!");
-        
-        // TODO: Initialize modules
-        // EnchantRegistry, TriggerEngine, EffectEngine, etc.
+        getLogger().info("Loaded " + enchantRegistry.getAllEnchants().size() + " enchants.");
     }
 
     @Override
@@ -22,5 +30,13 @@ public class NusaEnchant extends JavaPlugin {
 
     public static NusaEnchant getInstance() {
         return instance;
+    }
+
+    public EnchantRegistry getEnchantRegistry() {
+        return enchantRegistry;
+    }
+
+    public TriggerEngine getTriggerEngine() {
+        return triggerEngine;
     }
 }

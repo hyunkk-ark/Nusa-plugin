@@ -1,0 +1,15 @@
+id: vein_miner
+display-name: "&aVein Miner"
+description:
+  - "&7Mines entire vein of ores"
+  - "&7Shift to disable"
+category: mining
+rarity: rare
+max-level: 1
+triggers:
+  - BREAK
+effects:
+  - VEIN_MINER
+cooldown: 0
+weight: 5
+conflicts: []

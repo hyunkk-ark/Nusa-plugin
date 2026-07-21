@@ -1,0 +1,15 @@
+id: fire_aspect
+display-name: "&cFire Aspect"
+description:
+  - "&7Ignites your target on hit"
+  - "&7Duration increases with level"
+category: combat
+rarity: common
+max-level: 3
+triggers:
+  - ATTACK
+effects:
+  - FIRE
+cooldown: 0
+weight: 10
+conflicts: []
