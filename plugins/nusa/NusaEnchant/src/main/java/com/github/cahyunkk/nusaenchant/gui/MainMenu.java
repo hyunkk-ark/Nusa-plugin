@@ -59,11 +59,10 @@ public class MainMenu extends Menu {
 
         switch (event.getSlot()) {
             case 10:
-                p.sendMessage("§aOpening Enchant Book...");
-                // TODO: Open EnchantBookMenu
+                new EnchantBookMenu(p).open();
                 break;
             case 12:
-                p.sendMessage("§bOpening Combine Menu...");
+                new CombineMenu(p).open();
                 break;
             case 14:
                 p.sendMessage("§6Opening Forge...");
