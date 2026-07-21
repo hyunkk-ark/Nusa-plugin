@@ -12,6 +12,10 @@ commands:
     description: Main command for NusaEnchant
     usage: /nusaenchant
     aliases: [ne, enchant]
+  neitem:
+    description: Give NusaEnchant items
+    usage: /neitem <book|dust|crystal>
+    permission: nusaenchant.admin
 
 permissions:
   nusaenchant.*:

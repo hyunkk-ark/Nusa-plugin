@@ -29,6 +29,7 @@ public class NusaEnchant extends JavaPlugin {
 
         // Register command
         getCommand("nusaenchant").setExecutor(new com.github.cahyunkk.nusaenchant.command.NusaEnchantCommand(this));
+        getCommand("neitem").setExecutor(new com.github.cahyunkk.nusaenchant.command.ItemCommand());
 
         getLogger().info("NusaEnchant v" + getDescription().getVersion() + " enabled!");
         getLogger().info("Loaded " + enchantRegistry.getAllEnchants().size() + " enchants.");

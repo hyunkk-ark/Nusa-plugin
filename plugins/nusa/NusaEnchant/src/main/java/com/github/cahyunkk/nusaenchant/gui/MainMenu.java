@@ -65,10 +65,10 @@ public class MainMenu extends Menu {
                 new CombineMenu(p).open();
                 break;
             case 14:
-                p.sendMessage("§6Opening Forge...");
+                new ForgeMenu(p).open();
                 break;
             case 16:
-                p.sendMessage("§eOpening Collection...");
+                new CollectionMenu(p).open();
                 break;
             case 22:
                 p.closeInventory();
