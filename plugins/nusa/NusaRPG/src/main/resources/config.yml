@@ -1,0 +1,5 @@
+# NusaRPG Configuration
+rpg:
+  default-exp: 0
+  max-level: 99
+  available-jobs: [Warrior, Mage, Archer, Adventurer, Blacksmith]

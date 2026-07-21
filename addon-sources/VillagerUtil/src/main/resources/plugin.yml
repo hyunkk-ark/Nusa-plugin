@@ -1,0 +1,31 @@
+## CHANGE this to the name of your plugin.
+name: VillagerUtil
+
+## CHANGE this to your username.
+author: Apeiros
+
+## CHANGE this to a meaninful but short description of your plugin.
+description: A small Slimefun4 addon that adds a few convenience features related to villagers
+
+## CHANGE this to the path of the class that extends JavaPlugin.
+main: me.apeiros.villagerutil.VillagerUtil
+
+## You can change this to link to your website or repository. You can also remove this line if you want to.
+website: https://github.com/Apeiros-46B/CHANGEME
+
+## This value is automatically replaced by the version specified in your pom.xml file.
+## Do not change this.
+version: ${project.version}
+
+## This is the minimum minecraft version required to run your plugin.
+api-version: '1.21'
+
+## This is required and marks Slimefun as a plugin dependency.
+depend:
+- Slimefun
+
+## Initializes the command used by the Villager Trade Wand.
+commands:
+  resetvillager:
+    description: Resets the trades and EXP of a villager
+    usage: Craft a Villager Trade Wand and right click a villager whose trades are locked

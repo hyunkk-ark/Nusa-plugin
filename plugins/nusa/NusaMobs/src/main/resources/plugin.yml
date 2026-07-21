@@ -1,0 +1,24 @@
+name: NusaMobs
+version: '${version}'
+main: com.github.cahyunkk.nusamobs.NusaMobs
+api-version: '1.21'
+author: cahyunkk
+description: Lightweight custom mobs plugin — Java & Bedrock | NusaItems integrated
+website: https://github.com/cahyunkk/plugin-slimefun
+
+softdepend:
+  - NusaItems
+
+commands:
+  nusamobs:
+    description: NusaMobs main command
+    aliases: [nm, nmobs]
+    usage: /nusamobs <spawn|list|reload|info|killall>
+
+permissions:
+  nusamobs.admin:
+    default: op
+  nusamobs.spawn:
+    default: op
+  nusamobs.reload:
+    default: op

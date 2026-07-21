@@ -1,0 +1,11 @@
+# NusaSkills Configuration
+# Companion plugin for NusaItems & NusaMobs
+
+settings:
+  default-skill-level: 1
+  enable-integration: true
+
+skills:
+  default:
+    name: "Novice"
+    max-level: 10

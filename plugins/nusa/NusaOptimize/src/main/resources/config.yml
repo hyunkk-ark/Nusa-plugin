@@ -1,0 +1,6 @@
+# NusaOptimize Config
+# Anti lag — otomatis, tanpa config manual Bedrock
+optimization:
+  auto-gc: true
+  entity-limit: 500
+  chunk-optimize: true

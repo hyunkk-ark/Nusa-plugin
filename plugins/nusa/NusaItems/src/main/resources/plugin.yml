@@ -1,0 +1,30 @@
+name: NusaItems
+version: '${version}'
+main: com.github.cahyunkk.nusaitems.NusaItems
+api-version: '1.21'
+author: cahyunkk
+description: Custom items plugin — seperti Oraxen. Java & Bedrock. Model/texture + stats otomatis dari config Java (tanpa config manual Bedrock). Kompatibel MythicMobs, MMOItems, ItemsAdder, Oraxen.
+website: https://github.com/cahyunkk/plugin-slimefun
+
+softdepend:
+  - MythicMobs
+  - MMOItems
+  - ItemsAdder
+  - Oraxen
+  - EcoItems
+  - EcoEnchants
+  - ExecutableItems
+
+commands:
+  nusaitems:
+    description: NusaItems main command
+    aliases: [ni, nusa]
+    usage: /nusaitems <reload|give|list|pack|hooks>
+
+permissions:
+  nusaitems.admin:
+    default: op
+  nusaitems.give:
+    default: op
+  nusaitems.reload:
+    default: op

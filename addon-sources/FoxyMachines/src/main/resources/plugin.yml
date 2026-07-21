@@ -1,0 +1,28 @@
+name: FoxyMachines
+main: me.gallowsdove.foxymachines.FoxyMachines
+
+author: GallowsDove
+description: Adds tools, machines, items, armor, weapons, bosses and more!
+website: https://github.com/GallowsDove/FoxyMachines
+
+depend: [Slimefun]
+softdepend: [AuraSkills]
+version: ${project.version}
+api-version: '1.21'
+
+commands:
+  foxymachines:
+    description: foxymachines main command
+    usage: /foxymachines <subcommand>
+    aliases: [fm, foxy]
+
+permissions:
+  foxymachines.bypass-chunk-loader-limit:
+    description: Allows a player with the permission to place an unlimited amount of chunk loaders
+    default: op
+  foxymachines.admin:
+    description: Allows player to use admin-specific commands.
+    default: op
+  foxymachines.info:
+    description: Gives players access to basic FoxyMachines commands. Should never be revoked.
+    default: true

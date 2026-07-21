@@ -1,0 +1,9 @@
+# NusaEngine Config
+# Java & Bedrock support: resource pack otomatis (tanpa config manual Bedrock)
+engine:
+  enabled: true
+  render-mode: custom
+resource-pack:
+  auto-generate: true
+  pack-format: 18
+  description: "NusaEngine - Java & Bedrock compatible"

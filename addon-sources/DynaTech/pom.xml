@@ -1,0 +1,164 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>me.profelements</groupId>
+    <artifactId>DynaTech</artifactId>
+    <version>1.0.0</version>
+
+    <name>DynaTech</name>
+
+    <properties>
+      <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.organization>profelements</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>paper-repo</id>
+            <url>https://repo.destroystokyo.com/repository/maven-public/</url>
+        </repository>
+
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+        <repository>
+            <id>CodeMC</id>
+            <url>https://repo.codemc.org/repository/maven-public</url>
+        </repository>
+    </repositories>
+
+    <build>
+    <finalName>${project.name}</finalName>
+        <defaultGoal>clean package</defaultGoal>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>*</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <shadedPattern>me.profelements.dynatech.bstats</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>dev.j3fftw.extrautils</pattern>
+                            <shadedPattern>me.profelements.dynatech.extrautils</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>io.github.bakedlibs.dough</pattern>
+                            <shadedPattern>me.profelements.dynatech.dough</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>io.papermc.lib</pattern>
+                            <shadedPattern>me.profelements.dynatech.paperlib</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions> </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.20.6-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.papermc</groupId>
+            <artifactId>paperlib</artifactId>
+            <version>1.0.8</version>
+            <scope>compile</scope>
+        </dependency>
+	    <dependency>
+	        <groupId>com.github.Slimefun</groupId>
+	        <artifactId>Slimefun4</artifactId>
+	        <version>d12ae8580b</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.github.thebusybiscuit</groupId>
+                    <artifactId>cscorelib2</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.thebusybiscuit</groupId>
+            <artifactId>exoticgarden</artifactId>
+            <version>7f9a5f6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.mooy1</groupId>
+            <artifactId>InfinityExpansion</artifactId>
+            <version>d995144</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.github.SchnTgaiSpock</groupId>
+            <artifactId>Gastronomicon</artifactId>
+            <version>33e89f01e6</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>1.8</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Slimefun-Addon-Community</groupId>
+            <artifactId>extrautils</artifactId>
+            <version>73e76ac</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.baked-libs.dough</groupId>
+            <artifactId>dough-api</artifactId>
+            <version>f8ff251</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+</project>

@@ -1,0 +1,14 @@
+name: NusaEngine
+version: '1.0.0'
+main: com.github.cahyunkk.nusaengine.NusaEngine
+api-version: '1.21'
+softdepend: [NusaMobs, NusaItems, ItemsAdder, Oraxen, MythicMobs]
+description: Engine framework untuk NusaMobs — Java & Bedrock. Stats, AI behavior, dan model renderer support (tanpa config manual Bedrock; pakai resource pack otomatis).
+website: https://github.com/cahyunkk/plugin-slimefun
+
+commands:
+  nusaengine:
+    description: Engine control
+permissions:
+  nusaengine.admin:
+    default: op

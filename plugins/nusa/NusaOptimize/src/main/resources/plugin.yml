@@ -1,0 +1,14 @@
+name: NusaOptimize
+version: '1.0.0'
+main: com.github.cahyunkk.nusaoptimize.NusaOptimize
+api-version: '1.21'
+softdepend: [NusaMobs, NusaEngine, NusaRPG, ItemsAdder, Oraxen]
+description: Optimasi server — Java & Bedrock. Anti lag, manajemen entity, chunk optimization, GC trigger otomatis (tanpa config manual Bedrock).
+website: https://github.com/cahyunkk/plugin-slimefun
+
+commands:
+  nusaoptimize:
+    description: Optimization control
+permissions:
+  nusaoptimize.admin:
+    default: op

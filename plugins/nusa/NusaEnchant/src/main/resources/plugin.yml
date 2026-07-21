@@ -1,0 +1,27 @@
+name: NusaEnchant
+version: '${version}'
+main: com.github.cahyunkk.nusaenchant.NusaEnchant
+api-version: 1.21
+author: NusaTeam
+description: Advanced Custom Enchantment System for Paper 1.21.11
+depend: [NusaCore]
+softdepend: [PlaceholderAPI, Vault]
+
+commands:
+  nusaenchant:
+    description: Main command for NusaEnchant
+    usage: /nusaenchant
+    aliases: [ne, enchant]
+
+permissions:
+  nusaenchant.*:
+    description: Full access to NusaEnchant
+    children:
+      nusaenchant.use: true
+      nusaenchant.admin: true
+  nusaenchant.use:
+    description: Use NusaEnchant features
+    default: true
+  nusaenchant.admin:
+    description: Admin commands
+    default: op

@@ -1,0 +1,41 @@
+resource-pack:
+  auto-generate: true
+  built-in-server:
+    enabled: true
+    port: 8165
+    external-url: ""
+  description: "NusaItems Custom Resources"
+  pack-format: 34
+debug: false
+
+items:
+  example_sword:
+    id: "example_sword"
+    name: "&6Pedang Nusantara"
+    material: NETHERITE_SWORD
+    texture: "nusantara_sword.png"
+    custom-model-data: 10001
+    lore: ["&7Pedang legendaris dari","&7tanah Nusantara","","&e✦ &6Legendary Item"]
+    glow: true
+    unbreakable: true
+    attributes:
+      ATTACK_DAMAGE: 12.0
+      ATTACK_SPEED: 1.8
+  example_pickaxe:
+    id: "example_pickaxe"
+    name: "&bCangkul Dewa"
+    material: NETHERITE_PICKAXE
+    texture: "nusantara_pickaxe.png"
+    custom-model-data: 10002
+    lore: ["&7Alat pertambangan sakti","&7dari para dewa","","&e✦ &bEpic Item"]
+    glow: true
+    unbreakable: true
+  example_helmet:
+    id: "example_helmet"
+    name: "&eMahkota Raja"
+    material: NETHERITE_HELMET
+    texture: "nusantara_helmet.png"
+    custom-model-data: 10003
+    lore: ["&7Mahkota kebesaran","&7raja Nusantara","","&e✦ &6Legendary Item"]
+    glow: true
+    unbreakable: true

@@ -1,0 +1,17 @@
+name: NusaAuth
+version: '1.0.0'
+main: com.github.cahyunkk.nusaauth.NusaAuth
+api-version: '1.21'
+softdepend: [NusaRPG, NusaSkills, NusaItems, ItemsAdder, Oraxen]
+description: Plugin autentikasi — Java & Bedrock. Login/session tracking otomatis (tanpa config manual Bedrock). Integrasi dengan NusaRPG.
+website: https://github.com/cahyunkk/plugin-slimefun
+
+commands:
+  nusaauth:
+    description: Auth control
+    aliases: [na, auth]
+permissions:
+  nusaauth.admin:
+    default: op
+  nusaauth.use:
+    default: true

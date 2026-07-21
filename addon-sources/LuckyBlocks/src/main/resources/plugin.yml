@@ -1,0 +1,10 @@
+name: SlimefunLuckyBlocks
+version: ${project.version}
+author: TheBusyBiscuit
+website: https://github.com/TheBusyBiscuit/luckyblocks-sf/
+
+api-version: '1.21'
+main: io.github.thebusybiscuit.slimefunluckyblocks.SlimefunLuckyBlocks
+
+depend:
+- Slimefun

@@ -1,0 +1,18 @@
+name: NusaSkills
+version: '1.0.0'
+main: com.github.cahyunkk.nusaskills.NusaSkills
+api-version: '1.21'
+softdepend: [NusaItems, NusaMobs, Slimefun, ItemsAdder, Oraxen]
+description: Companion plugin for NusaItems & NusaMobs — Java & Bedrock. Adds skills, abilities, and integration features (ItemsAdder / Oraxen compatible).
+website: https://github.com/cahyunkk/plugin-slimefun
+
+commands:
+  nusaskills:
+    description: Main command for NusaSkills
+    aliases: [ns, nskills, skill]
+    usage: /nusaskills <list|info|reload>
+permissions:
+  nusaskills.admin:
+    default: op
+  nusaskills.use:
+    default: true

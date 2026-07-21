@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Repo Plugin Slimefun + Nusa</title>
+<style>
+body { font-family: sans-serif; max-width: 950px; margin: 30px auto; padding: 20px; background: #f0f2f5; color: #333; }
+h1 { color: #1a252f; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+input[type="text"] { width: 100%; padding: 14px; font-size: 18px; border: 3px solid #3498db; border-radius: 10px; box-sizing: border-box; }
+.category { margin-top: 30px; }
+.category h2 { color: #2c3e50; background: #3498db; color: #fff; padding: 10px 15px; border-radius: 8px; font-size: 18px; }
+.card { background: #fff; border: 1px solid #ccc; border-radius: 10px; padding: 15px 18px; margin: 10px 0; box-shadow: 0 3px 8px rgba(0,0,0,0.08); transition: transform 0.1s; }
+.card:hover { transform: translateY(-2px); }
+.card h3 { margin: 0 0 8px; color: #2c3e50; font-size: 16px; }
+.card p { margin: 0 0 10px; color: #555; font-size: 14px; }
+.card a { display: inline-block; padding: 6px 14px; background: #3498db; color: #fff; text-decoration: none; border-radius: 6px; font-size: 14px; }
+.card a:hover { background: #2980b9; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<h1>🔍 Search Seluruh Repo (Slimefun + Nusa)</h1>
+<p><strong>Cara pakai:</strong> ketik kata kunci di kotak bawah. Bisa nama plugin (auth, rpg, engine), fungsi (lag, bot, skill), atau file (config, jar, plugin). Hasil akan muncul otomatis.</p>
+
+<input type="text" id="searchInput" placeholder="Ketik: auth, rpg, lag, jar, config, slimefun, opex, bedrock..." onkeyup="filterAll()">
+
+<div class="category">
+<h2>📦 Plugin Nusa (Folder plugins/nusa/)</h2>
+
+<div class="card" data-name="nusa items custom item resource pack oraxen model texture config jar">
+<h3>NusaItems</h3>
+<p>Custom item + resource pack otomatis. Seperti Oraxen. Bedrock langsung lihat tanpa config manual.</p>
+<a href="../plugins/nusa/NusaItems/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaItems-1.0.0.jar">Download .jar</a>
+</div>
+
+<div class="card" data-name="nusa mobs custom mob stats ai spawn jar">
+<h3>NusaMobs</h3>
+<p>Custom mob dengan stats/AI. Integrasi semua plugin Nusa.</p>
+<a href="../plugins/nusa/NusaMobs/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaMobs-1.0.0.jar">Download .jar</a>
+</div>
+
+<div class="card" data-name="nusa skills skill ability pemain rpg jar">
+<h3>NusaSkills</h3>
+<p>Skill/ability pemain. Terhubung RPG, Engine, Auth.</p>
+<a href="../plugins/nusa/NusaSkills/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaSkills-1.0.0.jar">Download .jar</a>
+</div>
+
+<div class="card" data-name="nusa engine engine stats ai model renderer resource pack jar">
+<h3>NusaEngine</h3>
+<p>Engine stats/AI + model renderer. Resource pack otomatis.</p>
+<a href="../plugins/nusa/NusaEngine/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaEngine-1.0.0.jar">Download .jar</a>
+</div>
+
+<div class="card" data-name="nusa rpg rpg server class job level stats jar">
+<h3>NusaRPG</h3>
+<p>RPG server (class/job/stats/level). Terhubung Skill, Auth, Engine.</p>
+<a href="../plugins/nusa/NusaRPG/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaRPG-1.0.0.jar">Download .jar</a>
+</div>
+
+<div class="card" data-name="nusa auth auth autentikasi login register pw anti bot jar">
+<h3>NusaAuth</h3>
+<p>Autentikasi (register/login pw) + anti-bot. Integrasi semua Nusa.</p>
+<a href="../plugins/nusa/NusaAuth/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaAuth-1.0.0.jar">Download .jar</a>
+</div>
+
+<div class="card" data-name="nusa optimize anti lag gc entity chunk optimize jar">
+<h3>NusaOptimize</h3>
+<p>Anti-lag otomatis (GC, entity limit, chunk optimize).</p>
+<a href="../plugins/nusa/NusaOptimize/src/main/resources/plugin.yml">plugin.yml</a>
+<a href="../release/NusaOptimize-1.0.0.jar">Download .jar</a>
+</div>
+</div>
+
+<div class="category">
+<h2>🔧 Slimefun (Folder src/, addon-sources/, gradle/)</h2>
+
+<div class="card" data-name="slimefun build gradle jar slimefun4 source code">
+<h3>Slimefun 4 (Inti)</h3>
+<p>Repo utama Slimefun 4. Multi-version (Paper 1.21 – 26.x). Tidak diubah oleh tim Nusa.</p>
+<a href="README.md">README</a>
+<a href="build.gradle.kts">build.gradle</a>
+</div>
+
+<div class="card" data-name="slimefun addon dyna tech fox machines slime tink tinkering">
+<h3>Addons (addon-sources/)</h3>
+<p>DynaTech, FoxyMachines, SlimeTinker, LuckyBlocks, SoundMuffler, dll.</p>
+<a href="addon-sources/DynaTech/src/main/java/me/profelements/dynatech/DynaTech.java">DynaTech</a>
+</div>
+</div>
+
+<div class="category">
+<h2>📁 File Penting Repo</h2>
+
+<div class="card" data-name="readme plugin slimefun nusa readme">
+<h3>README.md</h3>
+<p>Panduan lengkap repo (Slimefun + Nusa).</p>
+<a href="README.md">Lihat</a>
+</div>
+
+<div class="card" data-name="license slimefun license">
+<h3>LICENSE</h3>
+<p>Lisensi proyek.</p>
+<a href="LICENSE">Lihat</a>
+</div>
+
+<div class="card" data-name="changelog slimefun changelog">
+<h3>CHANGELOG.md</h3>
+<p>Riwayat perubahan.</p>
+<a href="CHANGELOG.md">Lihat</a>
+</div>
+
+<div class="card" data-name="downloads download jar plugin release">
+<h3>Downloads / Release</h3>
+<p>Semua file .jar plugin Nusa.</p>
+<a href="downloads/README.md">Download Index</a>
+<a href="downloads/search.html">Search HTML</a>
+</div>
+</div>
+
+<script>
+function filterAll() {
+  var query = document.getElementById("searchInput").value.toLowerCase();
+  var cards = document.querySelectorAll(".card");
+  cards.forEach(function(card) {
+    var text = card.getAttribute("data-name").toLowerCase();
+    if (text.includes(query)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+}
+</script>
+</body>
+</html>

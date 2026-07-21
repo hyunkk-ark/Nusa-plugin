@@ -1,0 +1,43 @@
+auto-update: true
+
+explosions:
+  concrete-explode-chance: 10
+
+guns:
+  autoshoot: true
+  # This will allow bullets to be used from the inventory; if off, bullets are only used from the offhand. Turn off
+  # if this gets really laggy when shooting
+  use-bullets-from-inv: true
+  # Min range is intended to balance things a little more; this removes it and allows you to shoot at any distance
+  # within max range
+  min-range-on: true
+  energy-rifle-explosions: false
+  # The % chance that borax will drop from a stone block. can be a decimal
+  borax-drop-chance: 2.0
+
+space:
+  # The percent chance that a Segganesson meteor will be dropped instead of an Osmium meteor
+  segganesson-chance: 25
+  # The minimum delay between a meteor attractor activation and the drop (in minutes)
+  meteor-min-time: 10
+  # The maximum delay between a meteor attractor activation and the drop (in minutes)
+  meteor-max-time: 30
+  # The cooldown that a player can't use a meteor attractor (in minutes)
+  attractor-cooldown: 1
+  # The radius that a meteor will be dropped in. Since it's a radius, the meteor will drop
+  # in a value x 2 by value x 2 box (i.e. for the default 100, it's gonna drop in a 200x200 box)
+  meteor-drop-radius: 100
+
+suits:
+  # This will spawn blue particles underneath you when flying with a power suit
+  flight-particles: true
+  # If this is true, the Element Forge will use iron blocks instead of netherite blocks for the corners
+  legacy-element-forge: false
+
+radar:
+  show-players: true
+  show-mobs: true
+  show-energy-nets: true
+  show-gps: true
+  # The distance up/down that the radar can see
+  y-range: 30

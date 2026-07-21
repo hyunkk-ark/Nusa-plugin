@@ -1,0 +1,89 @@
+#########################################################################
+# Database type, optional are SQLITE, MYSQL, POSTGRESQL
+# Note: When switching database types, we will not automatically migrate data for you :)
+storageType: SQLITE
+
+# Use Base64 to encode data fields
+base64EncodeVal: true
+
+# Block data loading mode
+# Optional options are:
+# - LOAD_WITH_CHUNK: Load slime block data when the block is loaded for the first time during this server launch period
+# - LOAD_ON_STARTUP: Load all block data at once when starting the server, which may cause the server to take a long time to start.
+# It is recommended to use LOAD_WITH_CHUNK by default to save unnecessary memory overhead
+# If you find that there is obvious lag when loading the block, please change it to LOAD_ON_STARTUP
+dataLoadMode: LOAD_WITH_CHUNK
+#########################################################################
+
+#########################################################################
+# Number of database read and write threads
+# When using MySQL, it is recommended to set the maximum number of connections to the number of reading + writing threads, and the number of reading threads should be greater than the number of writing threads.
+# Note: The more threads, the better. Too many threads will lead to performance degradation. Please allocate appropriate quantity.
+
+#Read the number of threads
+readExecutorThread: 10
+#Number of writing threads
+writeExecutorThread: 5
+#########################################################################
+
+#########################################################################
+# Delayed writing function
+# This function is used to prevent certain data from being written frequently, resulting in a large number of meaningless write requests in the queue.
+# After enabling this function, when the data is changed, it will wait (delayedSecond) seconds, and then write to the database if there are no other changes.
+# When forced to save, the waiting data will be directly added to the write queue.
+delayedWriting:
+  # Whether to enable delayed writing
+  enable: true
+  #Delay writing seconds
+  delayedSecond: 5
+  # Forced save interval (unit: seconds)
+  forceSavePeriod: 300
+#########################################################################
+
+#########################################################################
+# SQLite configuration
+sqlite:
+  maxConnection: 5
+#########################################################################
+
+#########################################################################
+# MySQL configuration
+mysql:
+  # Database connection address
+  host: "127.0.0.1"
+  # Database connection port
+  port: 3306
+  # Database name
+  database: ""
+  # table prefix
+  tablePrefix: ""
+  #Connect username
+  user: ""
+  #Connect user password
+  password: ""
+  # Whether to use encrypted connection
+  useSSL: false
+  #Maximum number of connections
+  maxConnection: 15
+#########################################################################
+
+#########################################################################
+# PostgreSQL configuration
+postgresql:
+  # Database connection address
+  host: "127.0.0.1"
+  # Database connection port
+  port: 3306
+  # Database name
+  database: ""
+  # table prefix
+  tablePrefix: ""
+  #Connect username
+  user: ""
+  #Connect user password
+  password: ""
+  # Whether to use encrypted connection
+  useSSL: false
+  #Maximum number of connections
+  maxConnection: 15
+#########################################################################
