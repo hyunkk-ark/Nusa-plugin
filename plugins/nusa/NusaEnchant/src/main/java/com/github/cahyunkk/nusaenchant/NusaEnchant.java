@@ -25,6 +25,7 @@ public class NusaEnchant extends JavaPlugin {
 
         // Register listeners
         getServer().getPluginManager().registerEvents(new EnchantListener(this), this);
+        getServer().getPluginManager().registerEvents(new MenuListener(), this);
 
         // Register command
         getCommand("nusaenchant").setExecutor(new com.github.cahyunkk.nusaenchant.command.NusaEnchantCommand(this));

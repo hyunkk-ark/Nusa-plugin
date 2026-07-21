@@ -35,6 +35,10 @@ public class NusaEnchantCommand implements CommandExecutor {
             case "help":
                 player.sendMessage("§aNusaEnchant Commands:");
                 player.sendMessage("§7/ne list §8- List all enchants");
+                player.sendMessage("§7/ne menu §8- Open main menu");
+                break;
+            case "menu":
+                new com.github.cahyunkk.nusaenchant.gui.MainMenu(player).open();
                 break;
             default:
                 player.sendMessage("§cUnknown command. Use §e/ne help");
