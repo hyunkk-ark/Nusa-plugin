@@ -1,24 +1,33 @@
 package com.github.cahyunkk.nusaenchant.engine;
 
+import com.github.cahyunkk.nusaenchant.effect.Effect;
+import com.github.cahyunkk.nusaenchant.effect.impl.FireEffect;
+import com.github.cahyunkk.nusaenchant.effect.impl.LifeStealEffect;
+import com.github.cahyunkk.nusaenchant.effect.impl.VeinMinerEffect;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiConsumer;
 
 public class EffectEngine {
 
-    private final Map<String, BiConsumer<Player, Event>> effects = new HashMap<>();
+    private final Map<String, Effect> effects = new HashMap<>();
 
-    public void registerEffect(String name, BiConsumer<Player, Event> effect) {
-        effects.put(name.toUpperCase(), effect);
+    public EffectEngine() {
+        registerEffect(new FireEffect());
+        registerEffect(new LifeStealEffect());
+        registerEffect(new VeinMinerEffect());
     }
 
-    public void executeEffect(String name, Player player, Event event) {
-        BiConsumer<Player, Event> effect = effects.get(name.toUpperCase());
+    public void registerEffect(Effect effect) {
+        effects.put(effect.getName().toUpperCase(), effect);
+    }
+
+    public void executeEffect(String name, Player player, Event event, int level) {
+        Effect effect = effects.get(name.toUpperCase());
         if (effect != null) {
-            effect.accept(player, event);
+            effect.execute(player, event, level);
         }
     }
 

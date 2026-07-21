@@ -1,0 +1,15 @@
+id: blazing
+display-name: "&6Blazing"
+description:
+  - "&7Set enemies on fire"
+  - "&7Duration scales with level"
+category: combat
+rarity: uncommon
+max-level: 4
+triggers:
+  - ATTACK
+effects:
+  - FIRE
+cooldown: 0
+weight: 12
+conflicts: []

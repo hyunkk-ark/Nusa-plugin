@@ -1,0 +1,15 @@
+id: vein_miner
+display-name: "&aVein Miner"
+description:
+  - "&7Automatically mine entire ore veins"
+  - "&7Shift to disable"
+category: mining
+rarity: epic
+max-level: 1
+triggers:
+  - BREAK
+effects:
+  - VEIN_MINER
+cooldown: 0
+weight: 3
+conflicts: []

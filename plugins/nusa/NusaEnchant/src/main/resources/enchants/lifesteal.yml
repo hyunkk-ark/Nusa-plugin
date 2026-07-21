@@ -1,0 +1,15 @@
+id: lifesteal
+display-name: "&cLife Steal"
+description:
+  - "&7Steal health from enemies"
+  - "&7Higher level = more healing"
+category: combat
+rarity: rare
+max-level: 3
+triggers:
+  - ATTACK
+effects:
+  - LIFESTEAL
+cooldown: 0
+weight: 8
+conflicts: []
